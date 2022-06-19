@@ -1,0 +1,24 @@
+START
+
+a = 28
+b = 28
+
+FUNC gcd: ( a , b ) RETURN
+	IF b == 0 a
+	ELSE
+	    c = a % b
+	    WHILE c != 0 RETURN
+		a = b
+		b = c
+		c = a % b
+	    b
+
+d = gcd: (a , b)
+FUNC isperfectnumber: ( d ) RETURN
+	e = 0
+	i = 1
+	WHILE i < d RETURN
+		IF (d % i) == 0 e = e + i
+	IF e == d OUTPUT: "TRUE"
+	ELSE OUTPUT: "FALSE"
+END
